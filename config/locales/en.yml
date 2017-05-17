@@ -1,0 +1,229 @@
+en:
+  layouts:
+    application:
+      food_drink: "Food and Drink"
+    footer:
+      author: "This is project 1 of Nguyen Van Hoan itern and
+        Nguyen Minh Tuan new dev."
+      food_drink: "Food and Drink"
+      drink_for_everyone: "Drink for everyone"
+      drink_for_everybody: "And Food for everybody"
+      our_address: "Our Address"
+      keangnam_tower_13th_floor: :"Keangnam Tower 13th floor,"
+      nam_tu_liem_district_Ha Noi: "Nam Tu Liem District, Ha Noi, Viet Nam"
+      viet_nam: "Viet Nam"
+      company_phone: "Phone: (00) 222 666 444"
+      company_fax: "Fax: (000) 000 00 00 0"
+      email: "Email:"
+      copy_right: "2013 All Rights Reseverd Designed by"
+      home: "Home"
+      terms_of_user: "Terms of use"
+      privacy_policy: "Privacy Policy"
+      contact: "Contact"
+    header:
+      food_drink: Food & Drink
+      search: Search
+      placeholder_search: What are you find ?
+      login: Login
+      login_as: Login as
+      food_drink_account: "Food & Drink account ?"
+      email: "Email"
+      password: "Password"
+      cart: "  Cart"
+      remember_me: "Remember me ?"
+      not_have_account: "Does you have account ?"
+      forgotten_account: "Forgotten account ?"
+      register: "Register"
+      facebook: "Facebook"
+      google: "Google+"
+      update: "Manager"
+      your-orders-list: "Your order"
+  products:
+    index:
+      suggest: "Suggest"
+      product_list: "Product List"
+      add_products: "Add more product"
+    show:
+      by_admin: "by Admin"
+      comments: "comments"
+      point: "point"
+      comment_title: "Comments"
+      ago: "ago"
+      category: "Category"
+      tags: "Tags"
+    new:
+      create: "Create new product"
+    create:
+      product_success: "New product has been created!"
+    edit:
+      edit: "Edit Product"
+    form:
+      create: "Submit"
+    update:
+      success: "Product has been updated!"
+    destroy:
+      success: "Product has been deleted!"
+  home_pages:
+    about:
+      about: "About"
+  login: "Log in"
+  newuser: "New user?"
+  signup: "Sign up now!"
+  name: "Name:"
+  email: "Email:"
+  password: "Password"
+  confirm_password: "Password confirmation"
+  registration: "Registration"
+  profile: "Profile"
+  logout: "Log out"
+  home: "Home"
+  about: "About"
+  change: "Change"
+  your_cart: "Your Cart"
+  shopping_cart: "Shopping Cart"
+  continue: "Continue Shopping"
+  by_click_pay: "By clicking the payment button, you will pay for this shopping cart."
+  payed: "You payed for this shopping cart at "
+  update_cart: "Update Cart"
+  total_cost: "Total Cost: "
+  address: "Address:"
+  phone: "Phone:"
+  your_profile: "Profile Detail"
+  contact: "Contact"
+  price: "Price:"
+  description: "Description:"
+  quantity: "Quantity:"
+  category: "Category:"
+  not_admin: "You do not have permission to access this URL!"
+  add_product: "New product"
+  log_in: "Please log in first!"
+  add_image: "Add Image"
+  remove: "Remove"
+  none: "There is no product that matches this id!"
+  modify: " Modify"
+  action: "Action:"
+  delete: " Delete"
+  confirm: "Are You Sure?"
+  available_image: "Available Image (tick box if you want to delete image) :"
+  category_parent: "Category's Parent:"
+  add_category: "New category"
+  new_category: "Need more category?"
+  comment: "comments"
+  rating_now: "Rating now?"
+  add_cart: "Add to your cart"
+  product_quantity: "Product Quantity:"
+  no_result: "No result was found for keyword: "
+  search_here: "What are you looking for?"
+  max_price: "Max Price:"
+  min_price: "Min Price:"
+  rating: "Rating:"
+  advance_search: "Advance Search"
+  search: "Search"
+  thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
+  money_icon: "VND"
+  /product: " VND / 1 sp"
+  error: "Error"
+  see_all: " See all"
+  manage_user: "Manage Users"
+  manage_product: "Manage Products"
+  manage_category: "Manage Categories"
+  price_value: "VND"
+  pay: "Checkout"
+  payed_bt: "ALREADY PAID"
+  thank_payed: "Thank you, the cart in payed ! Please continue shoping ..."
+  your_orders: "You orders"
+  detail: "Detail"
+  total_cost: "Total cost:"
+  favorite_food: "Favorite Food"
+  users:
+    new:
+      create: "Sign Up"
+      signup: "Sign Up"
+    create:
+      welcome_user: "Welcome To Framgia Food and Drink"
+    show:
+      email: "Email: "
+      phone: "Phone number: "
+      address: "Address: "
+      none: "There is no user that matches this id!"
+    edit:
+      save: "Save Changes"
+      update_profile: "Update Profile"
+      edit_profile: "Edit Profile"
+      can_not: "You don't have permission to access this page!"
+    update:
+      success: "Your profile has been updated!"
+    index:
+      all_users: "All Users"
+    destroy:
+      success: "User have been deleted ! "
+  sessions:
+    create:
+      invalid: "Wrong email or password. Please try again!"
+      login_success: "Welcome back, "
+    new:
+      login: "Log in"
+      remember_me: "Remember me on this computer"
+  shared:
+    error_messages:
+      errors: "The form contains"
+    slide:
+      wellcome: "Welcome !"
+      wel_framgia: "Welcome to Framgia Food & Drink"
+      this_is_pro_1: "This is our first project"
+      food_drink: "Food & Drink Management!"
+      let_experience: "Let's experience !"
+      hope_well: "We hope you feel good"
+  comments:
+    create:
+      can't_comment: "Can't comment, please try again !"
+      commented: "Commented !"
+    add_comment:
+      cancel: "Cancel"
+      comment: "Comment"
+      write_comment: "What are you thinking ?"
+      rating_comment: "Add your comment"
+  javascript:
+    please_enter: "Please enter first !"
+    error_comment: "\n Error, please try again !"
+    error_rating: "\n Error, please try again !"
+    not_correct_user: "Nor correct user"
+    added_to_cart: "Added to cart !"
+    error_cart: "\n Error, please try again !"
+    remove_cart: "Removed into cart !"
+    input_number: "Please input number"
+    updated: "Updated"
+    sorry_only_have: "Sorry, we only have "
+    product_for_item: " products for item "
+    please_update_cart: "\n Please update your cart"
+    this_product: "Sorry, product "
+    out_stock: " is out of stock. We will update soon."
+    quantity_lager_0: "Quantity must be greate 0"
+  categories:
+    new:
+      create: "Create new category"
+    form:
+      create: "Submit"
+    create:
+      success: "New category has been created!"
+    show:
+      none: "There is no category that matches this id!"
+    update:
+      success: "Category's information has been updated!"
+    edit:
+      edit: "Edit Category"
+    destroy:
+      can_not_delete: "There are some products in this category, permission is denied!"
+      success: "Category has been deleted!"
+    index:
+      category_list: "Categories list"
+      add_categories: "Add more category"
+  searches:
+    index:
+      we_found: "We've found"
+      result: "results related to keyword"
+      suggest: "Try our suggestions:"
+      suggest1: "Please make sure all words are spelled correctly."
+      suggest2: "Try different keywords."
+      suggest3: "Try more general keywords."
+      suggest4: "Try fewer keywords."

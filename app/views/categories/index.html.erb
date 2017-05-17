@@ -1,0 +1,24 @@
+<% provide :title, t(".category_list") %>
+<div class="reservation_top">
+  <h1 class="text-center title"><%= t ".category_list" %></h1>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th><%= t "name" %></th>
+          <th><%= t "product_quantity" %></th>
+          <th><%= t "action" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "category_list", collection: @categories, as: "category" %>
+      </tbody>
+    </table>
+    <div class="plus-edit">
+      <i class="glyphicon glyphicon-plus"></i>
+      <%= link_to t(".add_categories"), new_category_path %>
+    </div>
+    <%= will_paginate %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<% provide :title, t(".all_users") %>
+<div class="reservation_top">
+  <h1 class="text-center title"><%= t ".all_users" %></h1>
+  <ul class="users">
+    <%= render partial: "list", collection: @users, as: "user" %>
+  </ul>
+  <%= will_paginate %>
+</div>

@@ -1,0 +1,96 @@
+<% provide :title, t("your_cart") %>
+<div class="container" style="padding-top: 30px">
+  <a class="title-categories">
+    <h1 class="fa fa-share-square">
+      <%= current_user.name %>
+    </h1>
+  </a>
+  <div class="row">
+    <div class="col-sm-3 col-md-3">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <span class="glyphicon glyphicon-folder-close"></span>
+              <%= t "your_orders" %>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in"
+            style="min-height: 500px">
+            <ul class="list-group">
+              <% @orders.each_with_index do |f, index| %>
+                <li class="list-group-item" id="order_item_<%= index %>"
+                  data-itemid=<%= index %>>
+                  <span class="glyphicon glyphicon-comment text-success"></span>
+                    <a class="item-order" ><%= f.updated_at %></a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if @orders.size > 0 %>
+      <% @orders.each_with_index do |item, index| %>
+        <div id="order_detail_<%= index %>" class="col-sm-9 col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading col-xs-12">
+              <h3 class="panel-title col-xs-8"><%= t "detail" %></h3>
+            </div>
+            <h3 id="ordersize"
+              data-ordersize=<%= @orders.size %> style="padding-bottom: 20px">
+            </h3>
+            <div class="panel-body">
+              <div >
+                <%= render partial: "orders/product_cart",
+                collection: item.line_items %>
+              </div>
+              <div class="panel-heading">
+                <div class="row text-center">
+                  <div class="col-xs-9">
+                    <h4 class="text-right">
+                      <div>
+                        <%= t "total_cost" %>
+                        <div id="total_cost" class="total-cost">
+                          <%= total_cost item %>
+                        </div>
+                        <%= t "money_icon" %>
+                      </div>
+                    </h4>
+                  </div>
+                    <div class="col-xs-3">
+                      <button class="btn btn-sm btn-block btn-success">
+                        <%= t "payed_bt" %>
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="col-sm-9 col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading col-xs-12">
+            <h3 class="panel-title col-xs-8"><%= t "detail" %></h3>
+            <h3 class="panel-title col-xs-2"><%= t "total_cost" %></h3>
+            <h3 class="panel-title col-xs-1"> 0 </h3>
+            <h3 class="panel-title col-xs-1"><%= t "price_value" %></h3>
+          </div>
+          <h3 id="ordersize" style="padding-bottom: 20px">
+          </h3>
+          <div class="panel-body">
+            <div >
+              <div class="row">
+                <div class="col-md-2 col-md-offset-5 no-product">
+                  <%= image_tag("no_product.png") %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

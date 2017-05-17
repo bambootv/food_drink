@@ -1,0 +1,25 @@
+<% provide :title, t(".product_list") %>
+<div class="reservation_top">
+  <h1 class="text-center title"><%= t ".product_list" %></h1>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th><%= t "name" %></th>
+          <th><%= t "category" %></th>
+          <th><%= t "quantity" %></th>
+          <th><%= t "action" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "product_list", collection: @products, as: "product" %>
+      </tbody>
+    </table>
+    <div class=" plus-edit">
+      <i class="glyphicon glyphicon-plus"></i>
+      <%= link_to t(".add_products"), new_product_path %>
+    </div>
+    <%= will_paginate %>
+  </div>
+</div>

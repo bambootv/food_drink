@@ -1,0 +1,32 @@
+<%= form_for product do |f| %>
+  <div class="text-center">
+    <div class="col-md-4">
+      <div class="view view-tenth box-shadow">
+        <a href="#" title="Hp">
+         <%= link_to image_tag(product.product_images.first.image,
+          size: Settings.image.size.category),
+          class: "img-responsive", alt: "" %></a>
+        <div class="label-product">
+          <span class="new"><%= product.price.round(0) %> <%= t "price_value" %></span>
+        </div>
+        <%= link_to product_path(product) do %>
+          <div class="mask" >
+            <h2><%= product.name %></h2>
+            <h3><%= product.description %></h3>
+            <div class="info">
+              <i class="fa fa-search-plus"></i>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="product_container wow bounceIn" data-wow-delay="0.4s">
+        <h3><%= link_to product.name, product_path(product) %></h3>
+        <div class="underheader-line"></div>
+        <ul class="person">
+          <h4><%= t "rating" %> <%= product.current_score.round(1) %></h4>
+        </ul>
+        <p><%= product.comments.size %> <%= t "comment" %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

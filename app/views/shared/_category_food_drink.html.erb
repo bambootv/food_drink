@@ -1,0 +1,28 @@
+<% @categories.each do |category| %>
+  <% if category.products.any? %>
+    <div class="container food-drink-form box-shadow" >
+      <div class="reservation wow fadeInLeft work" data-wow-delay="0.4s" id="work">
+        <div>
+          <div class="row container">
+            <div class="col-md-9">
+              <a class="title-categories">
+                <h1 class="fa fa-share-square">
+                  <%= category.name %>
+                </h1>
+              </a>
+              <p><%= category.description %></p>
+            </div>
+            <div class="col-md-3 see-all-button">
+              <%= link_to t("see_all"), category_path(category),
+                class:"btn btn-primary pull-right fa fa-caret-square-o-right" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row grids text-center">
+        <%= render partial: "categories/product", collection: category.products.limit(3),
+          as: "product" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
