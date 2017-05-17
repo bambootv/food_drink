@@ -1,0 +1,47 @@
+<div class="row box-shadow product-cart" id="product_cart_<%= product_cart.product_id %>"
+  data-price= <%= product_cart.product.price %>>
+  <div class="col-xs-2">
+    <%= link_to image_tag(product_cart.product.product_images.first.image,
+          size: Settings.image.size.product_order), product_cart.product %>
+  </div>
+  <div class="col-xs-4">
+    <h4 class="product-name">
+      <strong>
+      <%= link_to product_cart.product.name, product_cart.product %>
+      </strong>
+    </h4>
+    <h4><small><%= product_cart.product.description %></small></h4>
+  </div>
+  <div class="col-xs-6 row">
+    <div class="col-xs-7 text-right">
+      <h6>
+        <strong>
+          <div id="product_price" class="product_price">
+            <%= product_cart.product.price %>
+          </div>
+          <span class="text-muted" >
+            <%= t "/product" %>
+          </span>
+        </strong>
+      </h6>
+    </div>
+    <div class="col-xs-4">
+      <div class="quantity_pro_cart">
+        <input type="number" name="" class="form-control input-sm"
+          min= 1 autocomplete="off" value=<%= product_cart.quantity %>
+          data-product_id = <%= product_cart.product.id %>
+          <% if product_cart.id %> disabled <%end %> >
+      </div>
+    </div>
+    <% unless product_cart.id %>
+      <div class="col-xs-1">
+        <div class="delete_order" data-myval=<%= product_cart.product.id %> >
+          <button type="button" class="btn btn-link btn-xs pull-right">
+            <span class="glyphicon glyphicon-trash"> </span>
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<hr>

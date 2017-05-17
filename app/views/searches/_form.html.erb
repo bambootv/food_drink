@@ -1,0 +1,42 @@
+<%= form_tag searches_path, method: :get, class: "form-horizontal" do %>
+  <div class="form-group">
+    <label class="control-label col-md-2"><%= t "name" %></label>
+    <div class="col-md-7">
+      <%= text_field_tag :search, params[:search], id:"email", class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-md-2"><%= t "min_price" %></label>
+    <div class="col-md-7">
+      <%= text_field_tag :min_price, params[:min_price], class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-md-2"><%= t "max_price" %></label>
+    <div class="col-md-7">
+      <%= text_field_tag :max_price, params[:max_price], class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-md-2"><%= t "rating" %></label>
+    <div class="col-md-7">
+      <%= text_field_tag :rating, params[:rating], class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-md-2"><%= t "category" %></label>
+    <div class="col-md-7">
+      <%= select("","category_id", Category.select(:id, :name)
+        .collect{|category| [category.name, category.id]}, {include_blank: true}) %>
+    </div>
+  </div>
+
+  <button class="btn btn-success search-button" type="submit">
+    <i class="glyphicon glyphicon-search"></i>
+    <%= t "search" %>
+  </button>
+<% end %>

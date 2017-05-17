@@ -1,0 +1,14 @@
+<tr>
+  <td><%= @page * Settings.paginate.quantity_per_page + category_counter - 4 %></td>
+  <td><%= link_to category.name, category_path(category) %></td>
+  <td><%= category.products.size %></td>
+  <td>
+    <%= link_to edit_category_path(category) do %>
+      <span class="glyphicon glyphicon-pencil btn-xs btn-warning"></span>
+    <% end %>
+    <%= link_to category_path(category), method: :delete,
+      data: {confirm: t("confirm")} do %>
+      <span class="glyphicon glyphicon-trash btn-xs btn-danger"></span>
+    <% end %>
+  </td>
+</tr>

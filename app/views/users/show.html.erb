@@ -1,0 +1,53 @@
+<% provide :title, @user.name %>
+<h1 class="text-center"><%= t "your_profile" %></h1>
+<div class="container profile">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0
+      col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i></h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3" align="center">
+              <%= gravatar_for @user, size: Settings.image.size.avatar %>
+            </div>
+            <div class=" col-md-9 col-lg-9 ">
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td><%= t "name" %></td>
+                    <td><%= @user.name %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "email" %></td>
+                    <td><%= @user.email %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "address" %></td>
+                    <td><%= @user.address %></td>
+                  </tr>
+                  <tr>
+                    <td><%= t "phone" %></td>
+                    <td><%= @user.phone %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <i class="glyphicon glyphicon-envelope"></i>
+          <span class="pull-right">
+            <% if @user.is_user? current_user %>
+              <%= link_to edit_user_path(current_user) do %>
+                <i class="glyphicon glyphicon-pencil" title="Edit Profile"></i>
+              <% end %>
+            <% end %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

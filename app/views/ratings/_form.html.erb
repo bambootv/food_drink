@@ -1,0 +1,19 @@
+<div class="fa fa-comments" id="commets_size">
+  <%= @product.comments.size - 1 %>
+</div>
+<div class="fa fa-star" id="current_rating" >
+  <%= @product.current_score.round(2) %>
+</div>
+<% if current_user %>
+  <%= form_for @rating do |f| %>
+    <input id="stars" value=<%= @rating.score %> type="text" class="rating"
+      data-min=0 data-max=5 data-step=0.5 data-size="xs">
+    <%= f.hidden_field :product_id %>
+    <%= f.hidden_field :id, id: "rating_id" %>
+  <% end %>
+<% else %>
+  <div>
+    <i class="fa fa-star-o"></i>
+    <%= link_to t("rating_now"), login_path %>
+  </div>
+<% end %>

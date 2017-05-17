@@ -1,0 +1,6 @@
+<p>
+  <%= f.label :image %><br>
+  <%= image_tag(f.object.image, size: Settings.image.size.food_edit) %>
+  <%= link_to_remove_fields t("remove"), f %>
+  <%= f.file_field :image %>
+</p>
