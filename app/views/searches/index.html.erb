@@ -1,0 +1,20 @@
+<div class="container search-index">
+  <% if @products.present? %>
+    <h4>
+      <%= t ".we_found" %>
+      <span class="red-mark"><%= @products.size %></span>
+      <%= t ".result" %>
+      <span class="red-mark"><%= params[:search] %></span>:
+    </h4>
+    <%= render partial: "categories/product", collection: @products, as: "product" %>
+  <% else %>
+    <h4><%= t "no_result" %> <span class="red-mark"><%= params[:search] %></span></h4>
+    <ul class="search-index">
+      <%= t ".suggest" %>
+      <li><span><%= t ".suggest1" %></span></li>
+      <li><span><%= t ".suggest2" %></span></li>
+      <li><span><%= t ".suggest3" %></span></li>
+      <li><span><%= t ".suggest4" %></span></li>
+    </ul>
+  <% end %>
+</div>

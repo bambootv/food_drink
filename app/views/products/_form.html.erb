@@ -1,0 +1,45 @@
+<div class="row sign-up">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@product, html: {multipart: true}) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <div class="form-group">
+        <%= f.label :name, t("name") %>
+        <%= f.text_field :name, class: "form-control", autocomplete: :off  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description, t("description") %>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :category, t("category") %>
+        <%= f.select :category_id, @category, {}, class: "form-control" %>
+      </div>
+      <span class="add-product">
+        <%= link_to t("new_category"), new_category_path %>
+      </span>
+
+      <div class="form-group">
+        <%= f.label :quantity, t("quantity") %>
+        <%= f.text_field :quantity, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :price, t("price") %>
+        <%= f.text_field :price, class: "form-control" %>
+      </div>
+
+      <%= f.fields_for :product_images do |builder| %>
+        <%= render "product_image_fields", f: builder %>
+      <% end %>
+
+      <p class="btn btn-default img create">
+        <%= link_to_add_fields t("add_image"), f, :product_images %>
+      </p>
+
+      <%= f.submit t(".create"), class: "btn btn-success create" %>
+    <% end %>
+  </div>
+</div>

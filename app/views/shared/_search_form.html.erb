@@ -1,0 +1,7 @@
+<div class="form-group">
+  <%= text_field_tag :search, params[:search], placeholder: t("search_here"),
+    class: "form-control", id: "search" %>
+</div>
+<button type="submit" class="btn btn-default form-control">
+  <%= image_tag("search_icon.png", size: Settings.image.size.header_search) %>
+</button>

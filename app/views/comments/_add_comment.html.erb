@@ -1,0 +1,38 @@
+<div id="add_comment">
+  <%= form_for @comment do |f| %>
+    <div>
+      <div class="row">
+        <div class="col-md-10">
+          <div class="well well-sm">
+            <div class="text-right">
+              <a class="btn btn-success btn-green" id="open-review-box">
+                <%= t(".rating_comment") %>
+              </a>
+            </div>
+            <div class="row" id="post-review-box" >
+              <div class="col-md-12">
+                <%= f.text_field :content, class: "form-control animated",
+                  placeholder: t(".write_comment"), cols: "50", rows: "5",
+                  id: "new-content-comment", autocomplete: :off %>
+                <%= f.hidden_field :product_id, id: "product_id"%>
+                <div class="text-right">
+                  <a class="btn btn-danger btn-sm" id="close-review-box"
+                    href="#">
+                    <span class="glyphicon glyphicon-remove"></span>
+                      <%= t(".cancel") %>
+                  </a>
+                  <a class="btn btn-danger btn-sm" id="clear_comment">
+                    <span class="fa fa-eraser" aria-hidden="true"></span>
+                      <%= t(".clear") %>
+                  </a>
+                  <%= f.submit t(".comment"), id: "submit",
+                    class: "btn btn-success" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
