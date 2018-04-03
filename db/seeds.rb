@@ -36,7 +36,7 @@ Product.create! name: "Cua hap bia",
   category_id: 3
 
 ProductImage.create! product_id: 1,
-  remote_image_url: "http://sesan.com.vn/upload/hinh-anh/hinh-anh-thumb-1373991508.jpg"
+  remote_image_url: "https://cdn.pasgo.vn/anh-blog/mach-ban-cach-lam-cua-hap-bia-ngon-dung-dieu-1175372-2960.jpg"
 
 Product.create! name: "Cua rang muoi",
   description: "Cua rang muoi la mon an kha gan gui va mang lai
@@ -73,7 +73,7 @@ Product.create! name: "Bun bo hue",
   category_id: 5
 
 ProductImage.create! product_id: 4,
-  remote_image_url: "http://nau.vn/wp-content/uploads/2014/12/cach-lam-bun-bo-hue.jpg"
+  remote_image_url: "http://phothayy.com/wp-content/uploads/2014/09/bunbo-baphoa.jpg"
 
 Product.create! name: "Bun cha",
   description: "Bun cha la mon an voi bun, cha thit lon nuong tren than hoa va
@@ -132,7 +132,7 @@ Product.create! name: "Tra sua kep banh",
   category_id: 6
 
 ProductImage.create! product_id: 9,
-  remote_image_url: "http://cuahangnguyenlieu.com.vn/upload/images/Tin-tuc/thumbnail/cung-cap-nguyen-lieu-lam-tra-sua-quan-11-Y3TF91JJIW.jpg"
+  remote_image_url: "https://beptruong.edu.vn/wp-content/uploads/2016/11/banh-pizza-ham.jpg"
 
 Product.create! name: "Kem oc que",
   description: "Kem oc que chac han chang con xa la gi voi tat ca chung ta,
@@ -144,7 +144,7 @@ Product.create! name: "Kem oc que",
   category_id: 7
 
 ProductImage.create! product_id: 10,
-  remote_image_url: "http://vuakem.com/uploads/images/Kem-ngon-vua-kem-01.jpg"
+  remote_image_url: "https://media.foody.vn/res/g1/595/s/foody-album13176_90400972963892-528-635623571958764255.jpg"
 
 Product.create! name: "Kem dong doi",
   description: "An kem la phai co dong doi, co ban be moi vui, chu an mot minh
