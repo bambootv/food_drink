@@ -36,7 +36,7 @@ Product.create! name: "Cua hap bia",
   category_id: 3
 
 ProductImage.create! product_id: 1,
-  remote_image_url: "https://cdn.pasgo.vn/anh-blog/mach-ban-cach-lam-cua-hap-bia-ngon-dung-dieu-1175372-2960.jpg"
+  remote_image_url: "https://pastaxi-manager.onepas.vn/content/uploads/articles/cuahapbia/cach-lam-cua-hap-bia-1.jpg"
 
 Product.create! name: "Cua rang muoi",
   description: "Cua rang muoi la mon an kha gan gui va mang lai
@@ -169,7 +169,7 @@ Product.create! name: "Kem thap cam",
   category_id: 7
 
 ProductImage.create! product_id: 12,
-  remote_image_url: "http://img2.news.zing.vn/2012/12/21/jelly6a.jpg"
+  remote_image_url: "https://www.dkn.tv/wp-content/uploads/2017/06/ua-nuoc-mieng-voi-anh-que-kem-ngot-lim1.jpg"
 
 User.create! name: "Framgia",
   email: "1@gmail.com",
