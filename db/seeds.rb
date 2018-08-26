@@ -73,7 +73,7 @@ Product.create! name: "Bun bo hue",
   category_id: 5
 
 ProductImage.create! product_id: 4,
-  remote_image_url: "http://phothayy.com/wp-content/uploads/2014/09/bunbo-baphoa.jpg"
+  remote_image_url: "https://vcdn-ngoisao.vnecdn.net/2018/01/19/1-8515-1516314392.jpg"
 
 Product.create! name: "Bun cha",
   description: "Bun cha la mon an voi bun, cha thit lon nuong tren than hoa va

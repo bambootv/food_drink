@@ -6,21 +6,22 @@
 #
 default: &default
   adapter: mysql2
-  pool: 5
-  timeout: 5000
-  username: root
-  password: root
+  host: <%= ENV["DATABASE_HOST"] || "localhost" %>
+  pool: <%= ENV["DATABASE_POOL"] || 5 %>
+  timeout: <%= ENV["DATABASE_TIME_OUT"] || 5000 %>
+  username: <%= ENV["DATABASE_USER_NAME"] || "root" %>
+  password: <%= ENV["DATABASE_PASS_WORD"] || "root" %>
 
 development:
   <<: *default
-  database: food_drink
+  database: <%= ENV["DATABASE_NAME"] || "food_drink" %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: food_drink
+  database: <%= ENV["DATABASE_NAME"] || "food_drink" %>
 production:
   <<: *default
-  database: food_drink
+  database: <%= ENV["DATABASE_NAME"] || "food_drink" %>
